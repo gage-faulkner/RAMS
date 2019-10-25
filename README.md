@@ -1,6 +1,6 @@
 ![alt text](https://s3.wasabisys.com/datamanagement/Downloads/Pictures/Logos/cloud-checked-64.png "RAMS")
 
-RAMS
+Introduction | RAMS
 ======
 RAMS ─ Remote Asset Management Software ─ is an easy-to-use, lightweight, asset management application that uses a Windows Service to communicate data about Windows PCs to a Google Cloud Firestore NoSQL Database.
 
@@ -16,17 +16,18 @@ Getting Started
 ------
 Start by downloading the 'RAMS Endpoint Agent' from the table above. Once complete, you're ready to deploy. Please see the tables below for installation procedures along with some examples.
 
-> Please note: The following parameters/args can be entered in any order. The scheme is exactly the same regardless of the switch you're using. (-SWITCH "argument") Be sure there are no spaces after the hyphen and no spaces between the quotation marks.
+###### Please note: The following parameters/args can be entered in any order. The scheme is exactly the same regardless of the switch you're using. (-SWITCH "argument") Be sure there are no spaces after the hyphen and no spaces between the quotation marks.
 
 | Importance | Switch |                              Definition                              | Argument(s) |                               Example                              |
 |:----------:|:------:|:--------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------:|
-|  Required  |   -id  |      "Identification" ─ The name of your Firestore DB instance.      |    Custom   |                  `agent.exe -id "exampledb-2370"`                  |
-|  Required  |   -d   |  "Department" ─ The 3 letter acronym of the dept the PC belongs to.  |    Custom   |                        `agent.exe -d "AIM"`                        |
-|  Required  |   -a   |       "Authentication" ─ URL to your company's .JSON Auth file.      |    Custom   | `agent.exe -a "https://s3.wasabysys.com/data/auth/agentAuth.json"` |
-|  Optional  |   -s   | "Silent" ─ Hides the GUI from the end-user. Requires switches above. |  true/false |                        `agent.exe -s "true"`                       |
-|  Optional  |   -cd  |   "Change Installation Directory" ─ Changes the installation path.   |    Custom   |               `agent.exe -cid "C:\ProgramData\RAMS\"`              |
+|  Required  |   -id  |      Firestore DB Name      |    Custom   |                  `agent.exe -id "exampledb-2370"`                  |
+|  Required  |   -d   |  Department  |    Custom   |                        `agent.exe -d "AIM"`                        |
+|  Required  |   -a   |       URL to Auth File      |    Custom   | `agent.exe -a "https://site.com/Auth.json"` |
+|  Optional  |   -s   | Silent Installation |  true/false |                        `agent.exe -s "true"`                       |
+|  Optional  |   -cd  |   Change Install Folder   |    Custom   |               `agent.exe -cid "C:\ProgramData\RAMS\"`              |
 
 ##### Here's an example with all switches being used ─
 ```powershell
 agent.exe -id "exampledb-3407" -d "AIM" -a "https://s3.wasabysys.com/data/auth/agentAuth.json" -s "true" -cd "C:\ProgramData\RAMS\"
 ```
+Thanks.
